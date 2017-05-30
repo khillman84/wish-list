@@ -160,7 +160,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K35-dB-IN7">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K35-dB-IN7">
                                 <rect key="frame" x="16" y="72" width="100" height="100"/>
                                 <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -174,6 +174,9 @@
                                     <constraint firstAttribute="height" constant="30" id="8dP-6B-8mz"/>
                                     <constraint firstAttribute="width" constant="46" id="cT7-Ki-L5a"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="addImage:" destination="g9k-qG-Icg" eventType="touchUpInside" id="WsS-y2-Zdr"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MXK-g5-rrk">
                                 <rect key="frame" x="124" y="82" width="235" height="40"/>
@@ -267,6 +270,9 @@
                     <navigationItem key="navigationItem" title="Add/Edit" id="cHA-sm-7Eb">
                         <barButtonItem key="rightBarButtonItem" systemItem="trash" id="qgE-D6-jxy">
                             <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="deletePressed:" destination="g9k-qG-Icg" id="Tm3-Y8-0hz"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -274,6 +280,7 @@
                         <outlet property="priceField" destination="uRn-Kq-Mer" id="Ncj-Q5-Pjs"/>
                         <outlet property="storePicker" destination="2WP-xV-Wk9" id="el6-1U-879"/>
                         <outlet property="titleField" destination="MXK-g5-rrk" id="oo7-JG-Ubt"/>
+                        <outlet property="tumbImage" destination="K35-dB-IN7" id="TT2-sX-Bdd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="opB-WO-gKu" userLabel="First Responder" sceneMemberID="firstResponder"/>
